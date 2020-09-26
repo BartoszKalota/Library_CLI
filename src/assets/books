@@ -19,5 +19,12 @@
     "author": "Henryk Sienkiewicz",
     "genre": "novel",
     "path": "absolute-path-on-your-computer"
+  },
+  "28285579-b16d-4590-80c5-0d37056ba971": {
+    "id": "28285579-b16d-4590-80c5-0d37056ba971",
+    "title": "New Title",
+    "author": "New Author",
+    "genre": "comedy",
+    "path": "./somePath/newBook.pdf"
   }
 }
