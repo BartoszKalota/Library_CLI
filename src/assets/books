@@ -1,1 +1,30 @@
-{}
+{
+  "eeb22f81-6b3b-40e7-90cd-b083f4a33838": {
+    "id": "eeb22f81-6b3b-40e7-90cd-b083f4a33838",
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "genre": "novel",
+    "path": "path/to/file.pdf"
+  },
+  "47867108-10e8-4507-ae57-277f2c1cbbc2": {
+    "id": "47867108-10e8-4507-ae57-277f2c1cbbc2",
+    "title": "another title",
+    "author": "another author",
+    "genre": "science-fiction",
+    "path": "another/path/file.pdf"
+  },
+  "6078d9c7-8b00-4852-af42-51fefbc3a2bd": {
+    "id": "6078d9c7-8b00-4852-af42-51fefbc3a2bd",
+    "title": "W pustyni i w puszczy",
+    "author": "Henryk Sienkiewicz",
+    "genre": "novel",
+    "path": "absolute-path-on-your-computer"
+  },
+  "28285579-b16d-4590-80c5-0d37056ba971": {
+    "id": "28285579-b16d-4590-80c5-0d37056ba971",
+    "title": "New Title",
+    "author": "New Author",
+    "genre": "comedy",
+    "path": "./somePath/newBook.pdf"
+  }
+}
