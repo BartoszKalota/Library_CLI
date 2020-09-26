@@ -1,5 +1,7 @@
 import path from 'path';
 import fs from 'fs';
+import { v4 as uuidv4 } from 'uuid';
+console.log(uuidv4());
 
 const getBooksCollection = () => {
   const pathToBooks = path.resolve('./src/assets/books');
@@ -23,4 +25,4 @@ export const bookRepository = {
   }
 };
 
-bookRepository.findAll();
+bookRepository.save();
