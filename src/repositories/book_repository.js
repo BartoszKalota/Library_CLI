@@ -9,7 +9,7 @@ const getBooksCollection = () => {
 export const bookRepository = {
   findAll: async () => {
     const booksCollection = await getBooksCollection();
-
+    return Object.values(booksCollection);
   },
 
   findById: async (id) => {
@@ -23,5 +23,4 @@ export const bookRepository = {
   }
 };
 
-const id = 'eeb22f81-6b3b-40e7-90cd-b083f4a33838';
-bookRepository.findById(id);
+bookRepository.findAll();
