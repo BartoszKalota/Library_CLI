@@ -5,7 +5,7 @@
   "main": "client-server.js",
   "type": "module",
   "scripts": {
-    "client-server": "node ./src/client-server.js"
+    "client-server": "node --experimental-modules --no-warnings ./src/client-server.js"
   },
   "keywords": [],
   "author": "",
