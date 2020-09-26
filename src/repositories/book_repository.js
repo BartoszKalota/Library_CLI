@@ -31,7 +31,7 @@ export const bookRepository = {
     try {
       const booksCollection = await getBooksCollection();
       const signedBook = {
-        [`${book.id}`]: { ...book }
+        [`${book.id}`]: book
       };
       Object.assign(booksCollection, signedBook);
       await fs.promises.writeFile(pathToBooks, JSON.stringify(booksCollection, undefined, 2));
