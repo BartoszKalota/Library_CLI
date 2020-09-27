@@ -37,9 +37,16 @@ const server = http.createServer(async (req, res) => {
         res.end('Book not found.');
         return;
       }
+      
+      const { accept: format, content: bookContent } = fetchedCertainBook;
+      res.setHeader('Content-Type', format);
+      if (format === 'application/json' || format === 'text/html') {
+        res.end(bookContent);
+      }
+      if (format === 'application/pdf') {
+        bookContent.pipe(res);
+      }
     }
-
-    res.end();
   } catch (err) {
     res.statusCode = 403;
     res.end('Server error occurred while requesting books');
