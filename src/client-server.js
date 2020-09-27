@@ -49,7 +49,7 @@ const server = http.createServer(async (req, res) => {
     }
   } catch (err) {
     res.statusCode = 403;
-    res.end('Server error occurred while requesting books');
+    res.end('Server error occurred.');
   }
 });
 

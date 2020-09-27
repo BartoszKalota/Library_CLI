@@ -12,13 +12,13 @@ program
 program
   .command('add')
   .alias('a')
-  .description('Add a book')
+  .description('Add a new book to the library')
   .action(createBook);
 
 program
   .command('watch')
   .alias('w')
-  .description('Watch logs')
+  .description('Watch the current logs of requested books - real-time watching')
   .action(watchLogs);
 
 program.parse(process.argv);
