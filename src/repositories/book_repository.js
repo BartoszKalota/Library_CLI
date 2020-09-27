@@ -3,9 +3,7 @@ import fs from 'fs';
 
 const pathToBooks = path.resolve('./src/assets/books');
 
-const getBooksCollection = () => {
-  return JSON.parse(fs.readFileSync(pathToBooks, 'utf-8'));
-};
+const getBooksCollection = () => JSON.parse(fs.readFileSync(pathToBooks, 'utf-8'));
 
 export const bookRepository = {
   findAll: async () => {
