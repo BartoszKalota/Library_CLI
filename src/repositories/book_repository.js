@@ -1,6 +1,8 @@
 import path from 'path';
 import fs from 'fs';
 
+import { promptNewDataForABook } from '../utils/promptNewDataForABook.js';
+
 const pathToBooks = path.resolve('./src/assets/books');
 
 const getBooksCollection = () => JSON.parse(fs.readFileSync(pathToBooks, 'utf-8'));
@@ -60,6 +62,29 @@ export const bookRepository = {
       }
       await updateBooksCollection(updatedCollection);
       console.log('Book deleted.');
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  edit: async (id) => {
+    try {
+      const booksCollection = await getBooksCollection();
+      if (!booksCollection[id]) {
+        console.log('Procedure aborted. There is no book with such ID.');
+        return;
+      }
+      const editedBook = { ...booksCollection[id] };
+
+      const { title, author, path, genre } = await promptNewDataForABook();
+      editedBook.title = title;
+      editedBook.author = author;
+      editedBook.path = path;
+      editedBook.genre = genre;
+
+      booksCollection[id] = editedBook;
+      await updateBooksCollection(booksCollection);
+      console.log('Book edited.');
     } catch (err) {
       console.log(err);
     }
