@@ -18,6 +18,21 @@ export const getBook = async (id, accept) => {
         content: fs.createReadStream(book.path)
       };
     }
+    if (accept === 'text/html') {
+      return {
+        accept,
+        content: `
+          <html>
+            <header>${book.title}</header>
+            <body>
+              <p>Author: <b>${book.author}</b></p>
+              <p>Path: <b>${book.path}</b></p>
+              <p>Genre: <b>${book.genre}</b></p>
+            </body>
+          </html>
+        `
+      };
+    }
     return;
   } catch (err) {
     console.log(err);
