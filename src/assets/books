@@ -8,10 +8,10 @@
   },
   "47867108-10e8-4507-ae57-277f2c1cbbc2": {
     "id": "47867108-10e8-4507-ae57-277f2c1cbbc2",
-    "title": "another title",
-    "author": "another author",
+    "title": "Another Title",
+    "author": "Another Author",
     "genre": "science-fiction",
-    "path": "another/path/file.pdf"
+    "path": "another/path/fromEditCommand/file.pdf"
   },
   "6078d9c7-8b00-4852-af42-51fefbc3a2bd": {
     "id": "6078d9c7-8b00-4852-af42-51fefbc3a2bd",

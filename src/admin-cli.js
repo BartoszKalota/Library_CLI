@@ -4,6 +4,7 @@ import program from 'commander';
 
 import { createBook } from './services/createBook.js';
 import { deleteBook } from './services/deleteBook.js';
+import { editBook } from './services/editBook.js';
 import { watchLogs } from './services/watchLogs.js';
 
 program
@@ -21,6 +22,12 @@ program
   .alias('d')
   .description('Delete the book')
   .action(deleteBook);
+
+program
+  .command('edit')
+  .alias('e')
+  .description('Edit the book details')
+  .action(editBook);
 
 program
   .command('watch')
