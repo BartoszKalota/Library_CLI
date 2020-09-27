@@ -3,6 +3,7 @@
 import program from 'commander';
 
 import { createBook } from './services/createBook.js';
+import { deleteBook } from './services/deleteBook.js';
 import { watchLogs } from './services/watchLogs.js';
 
 program
@@ -14,6 +15,12 @@ program
   .alias('a')
   .description('Add a new book to the library')
   .action(createBook);
+
+program
+  .command('delete')
+  .alias('d')
+  .description('Delete the book')
+  .action(deleteBook);
 
 program
   .command('watch')
