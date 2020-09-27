@@ -1,10 +1,17 @@
 import fs from 'fs';
 
 import { bookRepository } from '../repositories/book_repository.js';
+import { logger } from '../utils/logger.js';
 
 export const getBook = async (id, accept) => {
   try {
     const book = await bookRepository.findById(id);
+
+    if (!book) {
+      return;
+    }
+
+    logger(`BookId ${book.id} was requested in format: ${accept}`);
 
     if (accept === 'application/json') {
       return {
@@ -33,7 +40,6 @@ export const getBook = async (id, accept) => {
         `
       };
     }
-    return;
   } catch (err) {
     console.log(err);
   }
