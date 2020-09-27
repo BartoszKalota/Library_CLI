@@ -1,2 +1,9 @@
-// do not change the line below
-require("dotenv").config({ path: __dirname + '/.env' })
+import dotenv from 'dotenv';
+import path from 'path';
+
+dotenv.config({ path: path.resolve('./src/.env') });
+
+export default {
+  NODE_PORT: process.env.NODE_PORT,
+  ACCEPTED_GENRES: process.env.ACCEPTED_GENRES
+};
