@@ -31,7 +31,7 @@ const server = http.createServer(async (req, res) => {
         res.end('BookId or Accept missing.');
       }
 
-      const fetchedCertainBook = await getBook(bookId);
+      const fetchedCertainBook = await getBook(bookId, req.headers.accept);
       if (!fetchedCertainBook) {
         res.statusCode = 404;
         res.end('Book not found.');
