@@ -1,6 +1,5 @@
 import path from 'path';
 import fs from 'fs';
-import { v4 as uuidv4 } from 'uuid';
 
 const pathToBooks = path.resolve('./src/assets/books');
 
@@ -40,12 +39,3 @@ export const bookRepository = {
     }
   }
 };
-
-const newBook = {
-  id: uuidv4(),
-  title: 'New Title',
-  author: 'New Author',
-  genre: 'comedy',
-  path: './somePath/newBook.pdf'
-};
-bookRepository.save(newBook);

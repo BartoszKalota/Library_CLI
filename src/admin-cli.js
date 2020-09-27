@@ -2,7 +2,7 @@
 
 import program from 'commander';
 
-import createBook from './services/createBook.js';
+import { createBook } from './services/createBook.js';
 
 program
   .version('1.0.0')
