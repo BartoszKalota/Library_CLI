@@ -3,6 +3,9 @@ A command-line interface (CLI) library application enabling: (1) books managemen
 
 ![Concept](./images/concept.jpg)
 
+# Video demo
+[![Watch the video](./images/video-demo.jpg)](https://youtu.be/29KPPTXQNK0)
+
 # Client-Server communication
 To launch the server, type:
 ```
